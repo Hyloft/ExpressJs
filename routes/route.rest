@@ -1,0 +1,55 @@
+GET http://localhost:3000/subscribers
+
+###
+GET http://localhost:3000/subscribers/60b773bd45f3f535b49108a2
+
+###
+
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "name":"person3",
+    "isSubscribed":true
+}
+###
+DELETE http://localhost:3000/subscribers/60b7711107dad73c80b7b1b1
+###
+PATCH http://localhost:3000/subscribers/60b773bd45f3f535b49108a2
+Content-Type: application/json
+
+{
+    "isSubscribed":false
+}
+
+###
+POST http://localhost:3000/users/signup
+Content-Type: application/json
+
+{
+    "name":"firstuser232f3",
+    "isAdmin":true,
+    "password":"xyz1234ff"
+}
+###
+GET http://localhost:3000/users
+
+###
+POST http://localhost:3000/users/signin
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJteXdlYiIsInN1YiI6IjYwYmU5MWZiYWU4YTI1MTFkMDNlNGM1ZCIsImlhdCI6MTYyMzEwMTk0Nzc0NSwiZXhwIjoxNjIzMTg4MzQ3NzQ1fQ.azP0h7MMkV6iZkGuWNrc_SUnpBp_JZ-DC7b7HtUTKiYeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJteXdlYiIsInN1YiI6IjYwYmU5MWZiYWU4YTI1MTFkMDNlNGM1ZCIsImlhdCI6MTYyMzEwMTk0Nzc0NSwiZXhwIjoxNjIzMTg4MzQ3NzQ1fQ.azP0h7MMkV6iZkGuWNrc_SUnpBp_JZ-DC7b7HtUTKiY
+
+
+###
+GET http://localhost:3000/characters
+
+###
+
+POST http://localhost:3000/characters
+Content-Type: application/json
+
+{
+    "name":"characyeer",
+    "user":"60b7e8b5b9291c204c78141f",
+    "subscribers":["60b7731145f3f535b49108a1","60b773bd45f3f535b49108a2"]
+}
